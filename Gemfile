@@ -21,6 +21,9 @@ gem 'bootstrap-sass'
 # Use stripe for ecomerce
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+# Adding figaro GEM for securely managing credentials
+gem 'figaro'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
