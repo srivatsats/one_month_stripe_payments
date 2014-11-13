@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141113055812) do
+ActiveRecord::Schema.define(version: 20141113104702) do
 
   create_table "purchases", force: true do |t|
     t.string   "email"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20141113055812) do
     t.string   "product_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "charge_id"
   end
 
 end
