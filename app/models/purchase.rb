@@ -13,7 +13,7 @@ class Purchase < ActiveRecord::Base
 		params = {}
 		params[:user] = { :email => "admin@smarton.co", :password => "5marton1" }
 		response = Net::HTTP.post_form(easle_api_url, params)
-		puts "api response -> #{response}"
+		puts "api response -> #{response.body}"
 	end
 
 	def create_payment_info_in_easle
@@ -23,7 +23,7 @@ class Purchase < ActiveRecord::Base
 		 :amount => self.amount, :currency => self.currency, :gateway => "stripe", status: "success" }
 
 		response = Net::HTTP.post_form(easle_api_url, params) 
-		puts "api response -> #{response}"
+		puts "api response -> #{response.body}"
 		return response
 	end
 end
